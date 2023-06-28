@@ -19,6 +19,7 @@ class Player
   end
 
   def won?
+    return false if occupied_positions.length < 3
     WINNING_COMBINATIONS.any? do |combination|
       combination & occupied_positions == combination
     end

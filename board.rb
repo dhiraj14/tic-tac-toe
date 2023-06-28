@@ -6,8 +6,10 @@ class Board
   end
 
   def display
-    puts "#{@positions[1]} | #{@positions[2]} | #{@positions[3]}"
-    puts "#{@positions[4]} | #{@positions[5]} | #{@positions[6]}"
-    puts "#{@positions[7]} | #{@positions[8]} | #{@positions[9]}"
+    puts " #{@positions[1]} | #{@positions[2]} | #{@positions[3]}"
+    puts "----------"
+    puts " #{@positions[4]} | #{@positions[5]} | #{@positions[6]}"
+    puts "----------"
+    puts " #{@positions[7]} | #{@positions[8]} | #{@positions[9]}"
   end
 end

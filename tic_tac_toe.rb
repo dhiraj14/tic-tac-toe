@@ -13,7 +13,7 @@ class TicTacToe
     puts "Let's play 🎮"
     while @moves_left > 0
       current_player = @moves_left % 2  == 0 ? @player_2  : @player_1
-      print "#{current_player.name}'s Move:"
+      puts "#{current_player.name}'s Move: "
       selected_position = gets.chomp.to_i
 
       if @board.positions.keys.include?(selected_position) && @board.positions[selected_position].empty?
@@ -21,7 +21,7 @@ class TicTacToe
         @board.positions[selected_position] = current_player.token
         @moves_left -= 1
       else
-        print "invalid move"
+        puts "invalid move"
       end
       @board.display
     end

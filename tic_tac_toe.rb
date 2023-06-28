@@ -1,25 +1,20 @@
 class TicTacToe
   def initialize
     @board = Hash[(1..9).map {|k| [k, ""]}]
-    @player_1 = []
-    @player_2 = []
+    @player_1 = { name: "Player 1", token: "X", positions: [] }
+    @player_2 = { name: "Player 2", token: "O", positions: [] }
     @moves_left = 9
   end
 
   def play
-    puts "Let's play"
+    puts "Let's play 🎮"
     while @moves_left > 0
-      puts "Select a position: "
+      current_player = @moves_left % 2  == 0 ? @player_2  : @player_1
+      puts "#{current_player[:name]}'s Move:"
       position = gets.chomp.to_i
       if @board[position].empty?
-        if @moves_left % 2 == 0
-          character = "X"
-          @player_1 << position
-        else
-          character = "O"
-          @player_2 << position
-        end
-        @board[position] = character
+        current_player[:positions] << position
+        @board[position] = current_player[:token]
         @moves_left -= 1
       else
         puts "invalid move"

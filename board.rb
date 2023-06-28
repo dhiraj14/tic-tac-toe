@@ -13,5 +13,6 @@ class Board
     puts " #{@positions[4]} | #{@positions[5]} | #{@positions[6]}"
     puts "----------"
     puts " #{@positions[7]} | #{@positions[8]} | #{@positions[9]}"
+    puts "\n"
   end
 end

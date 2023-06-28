@@ -1,5 +1,5 @@
 class Player
-  attr_accessor :name, :token, :occupied_positions, :board
+  attr_accessor :name, :token, :occupied_positions
 
   WINNING_COMBINATIONS = [
     [1,2,3],
@@ -12,16 +12,10 @@ class Player
     [3,5,7],
   ]
 
-  def initialize(name: , token:, board:)
+  def initialize(name: , token: nil)
     @name = name
     @token = token
-    @board = board
     @occupied_positions = []
-  end
-
-  def move(selected_position)
-    occupied_positions << selected_position
-    @board.positions[selected_position] = token
   end
 
   def won?

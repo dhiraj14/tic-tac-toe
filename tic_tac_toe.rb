@@ -23,6 +23,7 @@ class TicTacToe
       else
         puts "invalid move"
       end
+      system('clear')
       @board.display
     end
   end

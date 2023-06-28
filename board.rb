@@ -6,6 +6,8 @@ class Board
   end
 
   def display
+    system('clear')
+    puts "\n"
     puts " #{@positions[1]} | #{@positions[2]} | #{@positions[3]}"
     puts "----------"
     puts " #{@positions[4]} | #{@positions[5]} | #{@positions[6]}"

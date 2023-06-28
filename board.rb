@@ -15,4 +15,16 @@ class Board
     puts " #{@positions[7]} | #{@positions[8]} | #{@positions[9]}"
     puts "\n"
   end
+
+  def display_instructions
+    puts "Playing Instructions"
+    puts "Choose any box from 1 to 9 as below and play"
+    puts "\n"
+    puts " 1 | 2 | 3"
+    puts "----------"
+    puts " 4 | 5 | 6"
+    puts "----------"
+    puts " 7 | 8 | 9"
+    puts "\n"
+  end
 end

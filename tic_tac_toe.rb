@@ -10,8 +10,9 @@ class TicTacToe
 
   def play
     puts "Let's play 🎮"
-    initialize_players
+    @board.display_instructions
 
+    initialize_players
     while @moves_left > 0
       puts "#{@current_player.name}'s Move: "
       selected_position = gets.chomp.to_i
@@ -54,7 +55,6 @@ class TicTacToe
       @current_player = @player_2
     end
     puts "#{@current_player.name} WON the Toss"
-    @board.display
   end
 end
 

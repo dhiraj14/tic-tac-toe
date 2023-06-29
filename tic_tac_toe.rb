@@ -16,7 +16,10 @@ class TicTacToe
     while @moves_left > 0
       puts "#{@current_player.name}'s Move: "
       selected_position = gets.chomp.to_i
-
+      unless (1..9).include? selected_position
+        puts "Invalid input"
+        next
+      end
       if @board.positions[selected_position]&.empty?
         move(selected_position)
         @board.display
